@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+          background-color: rgb(133, 133, 133); 
+          }
+        table {
+            background-color: rgb(133, 133, 133);
+        }
+        tr:hover {
+            background-color: rgb(196, 196, 196); 
+        }
+     
+    </style>
+</head>
+<body>
+    <h1>User Info</h1>
+    <a href="/Add">Add New</a>
+    <table border="1">
+  <tr>
+    <th>User Id</th>
+    <th>User Name</th>
+    <th>User Place</th>
+    <th colspan="2">Operations</th>
+  </tr>
+  <% user.forEach(user => { %>
+   <tr>
+   
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.place %></td>
+        <td><a href="edit/<%= user.id %>">Edit</a></td>
+        <td><a href="delete/<%= user.id %>" onclick="return confirm(`Are You Sure you want to delete <%= user.name %>`)">Delete</a></td>
+   </tr> 
+   <% }) %>
+    <!-- <% user.forEach(user => { %>
+        <p><strong>User Id:</strong><%= user.id %></p>
+        <p><strong>User Name:</strong><%= user.name %></p>
+        <p><strong>User Place:</strong><%= user.place %></p>
+      <% }) %> -->
+    </table>
+</body>
+</html>

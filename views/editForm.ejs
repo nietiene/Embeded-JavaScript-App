@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    background-color: rgb(133, 133, 133);
+   
+ }
+ h1 {
+    color: white;
+    margin-left: 45%;
+    margin-top: 8%;
+ }
+ 
+ form {
+    background-color: rgb(157, 157, 157);
+    width: 30%;
+    padding: 10px 0px;
+    margin-left: 37%;
+    margin-top: 2%;
+ }
+ 
+ label {
+    font-size: 16px;
+    color:  white;
+    font-weight: bold;
+    margin-left: 5px;
+ }
+ 
+ input {
+    width: 94%;
+    padding: 6px 6px;
+    margin-left: 3px;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+ }
+.btn1{
+    border: none;
+    margin-top: 15px;
+    width: 50%;
+    height: 30px;
+    color: white;
+    background-color: rgb(157, 157, 157);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 3px;
+    transition: 1s;
+ }
+ .btn2 {
+    background-color:rgb(157, 157, 157);
+    width: 45%;
+    height: 30px;
+    border: 1px solid red;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+  }
+ .btn2:hover {
+    background-color: red;
+ }
+ .btn1:hover {
+    background-color:white;
+    color:  rgb(133, 133, 133);;
+ }
+    </style>
+</head>
+<body>
+    <h1>Edit User</h1>
+    <form action="/edit/<%= user.id %>" method="post">
+        <label for="">Id</label><br>
+        <input type="text" name="id" value="<%= user.id %>" readonly><br>
+
+        <label for="">Name</label><br>
+        <input type="text" name="name" value="<%= user.name %>" placeholder="Enter user Name"><br>
+
+        <label for="">Place</label><br>
+        <input type="text" name="place" value="<%= user.place %>" placeholder="Enter user Place"><br>
+
+        <button type="submit" class="btn1">Submit</button>
+      <button class="btn2"><a href="/user" class="btn2">Cancel</a></button> 
+    </form>
+</body>
+</html>
