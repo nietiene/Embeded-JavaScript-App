@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New User</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Update User</title>
+     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Add New</h1>
-    <form action="/Add" method="post">
-        <label for="">Id</label><br>
-        <input type="text" name="id" placeholder="Enter user Id"><br>
-        <label for="">Name</label><br>
-        <input type="text" name="name" placeholder="Enter user Name"><br>
-        <label for="">Place</label><br>
-        <input type="text" name="place" placeholder="Enter user Place"><br>
+<body class="min-h-screen flex items-center justify-center bg-blue-100">
+   <div class="max-w-md bg-blue-300 p-8 w-full shadow-lg rounded-2xl">
+  
+    <h1 class="text-2xl font-bold text-center text-blue-500 ">Edit User</h1>
+    <form action="/add" method="post" class="space-y-1">
+            <label class="block text-blue-500 text-xl font-bold">Id</label><br>
+            <input type="text" name="id" 
+            class="w-full py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-blue-500 text-blue-500 bg-blue-100" /><br>
 
-        <button type="submit" class="btn1">Submit</button>
-        <button class="btn2"><a href="/user" >Cancel</a></button>
-        
-    </form>
+            <label class="block text-blue-500 text-xl font-bold">Name</label><br>
+            <input type="text" name="name" placeholder="Enter user Name"
+             class="w-full py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-blue-500 text-blue-500 bg-blue-100" ><br>
+
+            <label class="block text-blue-500 text-xl font-bold">Place</label><br>
+            <input type="text" name="place" placeholder="Enter user Place"
+             class="w-full py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-blue-500 text-blue-500 bg-blue-100" ><br>
+
+            <div class="flex justify-between">
+                <button type="submit" class="bg-blue-500 px-3 py-1 mt-2 rounded-lg hover:bg-blue-800 text-white text-sm">Submit</button>
+                <a href="/user" class="bg-red-500 px-3 py-1 mt-2 rounded-lg hover:bg-red-800 text-white text-sm">Cancel</a>
+            </div>
+          </form>
+     </div>
 </body>
 </html>
