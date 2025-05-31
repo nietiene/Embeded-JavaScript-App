@@ -13,16 +13,20 @@
     <form action="/edit/<%= user.id %>" method="post" class="space-y-1">
             <label class="block text-blue-500 text-xl font-bold">Id</label><br>
             <input type="text" name="id" value="<%= user.id %>" readonly 
-            class="w-full py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-blue-500" /><br>
+            class="w-full py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-blue-500 text-blue-500 bg-blue-100" /><br>
 
-            <label for="">Name</label><br>
-            <input type="text" name="name" value="<%= user.name %>" placeholder="Enter user Name"><br>
+            <label class="block text-blue-500 text-xl font-bold">Name</label><br>
+            <input type="text" name="name" value="<%= user.name %>" placeholder="Enter user Name"
+             class="w-full py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-blue-500 text-blue-500 bg-blue-100" ><br>
 
-            <label for="">Place</label><br>
-            <input type="text" name="place" value="<%= user.place %>" placeholder="Enter user Place"><br>
+            <label class="block text-blue-500 text-xl font-bold">Place</label><br>
+            <input type="text" name="place" value="<%= user.place %>" placeholder="Enter user Place"
+             class="w-full py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-blue-500 text-blue-500 bg-blue-100" ><br>
 
-            <button type="submit" class="btn1">Submit</button>
-            <button class="btn2"><a href="/user" class="btn2">Cancel</a></button> 
+            <div class="flex justify-between">
+                <button type="submit" class="btn1">Submit</button>
+                <a href="/user" class="btn2">Cancel</a>
+            </div>
           </form>
      </div>
 </body>
