@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update User</title>
-    
+     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center bg-blue-100">
+   <div>
+
+  
     <h1>Edit User</h1>
     <form action="/edit/<%= user.id %>" method="post">
         <label for="">Id</label><br>
@@ -15,11 +18,12 @@
         <label for="">Name</label><br>
         <input type="text" name="name" value="<%= user.name %>" placeholder="Enter user Name"><br>
 
-        <label for="">Place</label><br>
-        <input type="text" name="place" value="<%= user.place %>" placeholder="Enter user Place"><br>
+            <label for="">Place</label><br>
+            <input type="text" name="place" value="<%= user.place %>" placeholder="Enter user Place"><br>
 
-        <button type="submit" class="btn1">Submit</button>
-      <button class="btn2"><a href="/user" class="btn2">Cancel</a></button> 
-    </form>
+            <button type="submit" class="btn1">Submit</button>
+            <button class="btn2"><a href="/user" class="btn2">Cancel</a></button> 
+          </form>
+     </div>
 </body>
 </html>
