@@ -7,16 +7,15 @@
      <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen flex items-center justify-center bg-blue-100">
-   <div>
-
+   <div class="max-w-md bg-blue-300 p-8 w-full ">
   
     <h1>Edit User</h1>
     <form action="/edit/<%= user.id %>" method="post">
-        <label for="">Id</label><br>
-        <input type="text" name="id" value="<%= user.id %>" readonly><br>
+            <label for="">Id</label><br>
+            <input type="text" name="id" value="<%= user.id %>" readonly><br>
 
-        <label for="">Name</label><br>
-        <input type="text" name="name" value="<%= user.name %>" placeholder="Enter user Name"><br>
+            <label for="">Name</label><br>
+            <input type="text" name="name" value="<%= user.name %>" placeholder="Enter user Name"><br>
 
             <label for="">Place</label><br>
             <input type="text" name="place" value="<%= user.place %>" placeholder="Enter user Place"><br>
