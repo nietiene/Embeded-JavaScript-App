@@ -30,7 +30,9 @@
         <td class="py-2 px-6 border-b">
           <a href="edit/<%= user.id %>" >Edit</a>
         </td>
-        <td class="py-2 px-4 border-b"><a href="delete/<%= user.id %>" onclick="return confirm(`Are You Sure you want to delete <%= user.name %>`)">Delete</a></td>
+        <td class="py-2 px-4 border-b">
+          <a href="delete/<%= user.id %>" onclick="return confirm(`Are You Sure you want to delete <%= user.name %>`)" class="text-red-500">Delete</a>
+        </td>
    </tr> 
    <% }) %>
     <!-- <% user.forEach(user => { %>
